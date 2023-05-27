@@ -126,3 +126,13 @@
             sm:leading-6
             placeholder:text-center
 }
+
+.errorlist {
+    @apply
+    p-2
+    bg-red-100
+    rounded-lg
+    text-red-800
+
+
+}
