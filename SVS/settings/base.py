@@ -181,3 +181,6 @@ SITE_ID = 1
 
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 
+ACCOUNT_FORMS = {
+    'login': 'users.views.Login'
+}

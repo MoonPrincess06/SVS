@@ -11,5 +11,5 @@ class lesson(models.Model):
     start = models.DateTimeField()
     end = models.DateTimeField()
     recurring = models.BooleanField(default=False)
-    location = models.CharField(max_length=20)
+    location = models.CharField(max_length=20, null=True)
     # TODO recurrence = models.Choices()

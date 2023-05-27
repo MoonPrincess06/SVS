@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base{
     label {
-        @apply block mb-2 text-sm font-medium text-gray-900
+        @apply block text-sm font-medium leading-6 text-gray-900 mb-2 text-left
     }
     section {
         @apply bg-white
@@ -33,7 +35,8 @@
         placeholder:text-gray-400
         focus:ring-2
         focus:ring-inset
-        focus:ring-indigo-600
+        focus:ring-primary-100
+        focus:ring-offset-primary-100
         sm:text-sm
         sm:leading-6
     }
@@ -42,9 +45,9 @@
         mb-4
         text-4xl
         tracking-tight
-        font-extrabold
         text-center
         text-gray-900
+        font-sans
     }
     form {
         @apply
@@ -59,11 +62,67 @@
         text-center
         text-white
         rounded-lg
-        bg-primary-700
+        bg-primary-100
         sm:w-fit
-        hover:bg-primary-800
+        hover:bg-primary-100
         focus:ring-4
         focus:outline-none
-        focus:ring-primary-300
+        focus:ring-white
+        justify-center
     }
+
+    [type = 'text'],
+    [type = 'password']{
+        @apply
+        rounded-lg
+    }
+}
+ @layer components {
+     .btn-accent {
+         color: white;
+         font-style: normal;
+         text-align: center;
+         vertical-align: middle;
+         margin-top: 1px;
+         margin-bottom: 1px;
+         cursor: pointer;
+         background-image: none;
+         border-style: solid;
+         border-radius: 2px;
+         outline: none;
+         white-space: pre-wrap;
+         @apply
+         bg-accent-100
+         uppercase
+         font-sans
+         font-normal
+         justify-center
+     }
+     input::placeholder {
+         @apply
+            text-center
+
+     }
+ }
+
+@layer utilities {
+
+
+ }
+.loginfield {
+         border-radius: 5px;
+         @apply
+            border-0
+            block
+            w-full
+            py-1.5
+            text-gray-900
+            shadow-sm
+            ring-1
+            ring-inset
+            ring-gray-300
+            placeholder:text-gray-400
+            sm:text-sm
+            sm:leading-6
+            placeholder:text-center
 }
