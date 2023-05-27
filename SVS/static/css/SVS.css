@@ -596,7 +596,7 @@ label {
   font-weight: 500;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(0 66 106 / var(--tw-text-opacity));
 }
 
 section {
@@ -676,11 +676,12 @@ h2 {
   margin-bottom: 1rem;
   text-align: center;
   font-family: Barlow;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  letter-spacing: -0.025em;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(255 111 97 / var(--tw-text-opacity));
 }
 
 form > :not([hidden]) ~ :not([hidden]) {
@@ -866,10 +867,6 @@ input::placeholder {
   position: static;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .block {
   display: block;
 }
@@ -923,34 +920,8 @@ input::placeholder {
   padding-bottom: 3rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .align-middle {
   vertical-align: middle;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.leading-9 {
-  line-height: 2.25rem;
-}
-
-.tracking-tight {
-  letter-spacing: -0.025em;
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .loginfield {

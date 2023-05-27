@@ -6,7 +6,7 @@
 
 @layer base{
     label {
-        @apply block text-sm font-medium leading-6 text-gray-900 mb-2 text-left
+        @apply block text-sm font-medium leading-6 mb-2 text-left text-primary-100
     }
     section {
         @apply bg-white
@@ -42,12 +42,13 @@
     }
     h2 {
         @apply
+        font-semibold
+        text-accent-100
         mb-4
-        text-4xl
-        tracking-tight
+        text-2xl
         text-center
-        text-gray-900
         font-sans
+        uppercase
     }
     form {
         @apply
