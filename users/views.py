@@ -5,6 +5,7 @@ class Login(LoginForm):
     password = forms.CharField(
         max_length=50,
         label='Passwort',
+        label_suffix='',
         widget=forms.PasswordInput(attrs={
             'placeholder':'',
             'class':'loginfield'
@@ -23,6 +24,7 @@ class Login(LoginForm):
             'class':'loginfield'
         })
         self.fields['login'].label = "Benutzername"
+        self.fields['login'].label_suffix = ""
         del self.fields['remember']
 
     def login(self, *args, **kwargs):
