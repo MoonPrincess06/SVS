@@ -10,6 +10,7 @@ class Login(LoginForm):
             'placeholder':'',
             'class':'loginfield'
         }))
+    remember = False
 
     error_messages = {
         "account_inactive": "Dieser Benutzer ist inaktiv.",
@@ -25,7 +26,6 @@ class Login(LoginForm):
         })
         self.fields['login'].label = "Benutzername"
         self.fields['login'].label_suffix = ""
-        del self.fields['remember']
 
     def login(self, *args, **kwargs):
         return super(Login, self).login(*args, **kwargs)

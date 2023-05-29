@@ -1,15 +1,18 @@
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from lessons.forms import lessonCreationForm
-from teachers.models import teacher
-from teachers.forms import teacherCreationForm
+from students.forms import studentCreationForm
+from students.models import student
 
 @login_required(login_url='/accounts/login/')
 def HomePage(request):
-    context = {}
-    if teacher.DoesNotExist:
-        context['form'] = teacherCreationForm()
-    else:
-        context['form'] = lessonCreationForm()
 
-    return render(request, "home/home_page.html", context)
+    if request.method == 'POST':
+        form = studentCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'SCHUELER ERSTELLT WOOOOOO')
+    else:
+        form = studentCreationForm()
+
+    return render(request, "home/home_page.html", {'form': form})

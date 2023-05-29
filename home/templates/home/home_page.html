@@ -9,7 +9,11 @@
 {% endblock extra_css %}
 
 {% block content %}
-
-{{ form.as_p }}
-
+<div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <form action="" method="POST" class="space-y-6">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn-accent" type="submit">Erstellen</button>
+    </form>
+</div>
 {% endblock content %}
