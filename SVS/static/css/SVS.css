@@ -875,6 +875,10 @@ input::placeholder {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .hidden {
   display: none;
 }
@@ -897,6 +901,10 @@ input::placeholder {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-items-start {
+  justify-items: start;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -970,6 +978,27 @@ input::placeholder {
   padding: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+
+nav{
+  background: rgb(0,51,82);
+  background: linear-gradient(0deg, rgba(0,51,82,1) 0%, rgba(0,66,106,1) 100%);
+  width: 100%;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.navitem {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 640px) {

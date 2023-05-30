@@ -6,13 +6,13 @@ from students.models import student
 
 @login_required(login_url='/accounts/login/')
 def HomePage(request):
-
+    context = {'students': student.objects.all()}
     if request.method == 'POST':
-        form = studentCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
+        context['form'] = studentCreationForm(request.POST)
+        if context['form'].is_valid():
+            context['form'].save()
             messages.success(request, 'SCHUELER ERSTELLT WOOOOOO')
     else:
-        form = studentCreationForm()
+        context['form'] = studentCreationForm()
 
-    return render(request, "home/home_page.html", {'form': form})
+    return render(request, "home/home_page.html", context)

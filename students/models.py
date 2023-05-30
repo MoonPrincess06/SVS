@@ -177,5 +177,4 @@ class student(models.Model):
         misc = models.ManyToManyField(miscFile)
 
     def __str__(self):
-        return self.firstName + " " + self.lastName
-# Create your models here.
+        return self.lastName + ", " + self.firstName

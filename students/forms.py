@@ -20,13 +20,21 @@ class studentCreationForm(forms.ModelForm):
             'class': 'loginfield'
         }))
     DOB = forms.DateField(
-        label='Vorname',
+        label='Geburtsdatum',
         label_suffix='',
-        widget=forms.DateInput(attrs={
+        widget=forms.SelectDateWidget(attrs={
             'placeholder': '',
             'class': 'loginfield'
         }))
 
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['PHorEXE'].label = 'Wählen Sie'
+        for field in self.fields.values():
+            field.label_suffix = ''
+
     class Meta:
         model = student
         fields = '__all__'
+

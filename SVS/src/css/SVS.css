@@ -137,3 +137,21 @@
 
 
 }
+
+nav{
+    background: rgb(0,51,82);
+    background: linear-gradient(0deg, rgba(0,51,82,1) 0%, rgba(0,66,106,1) 100%);
+    @apply
+    w-full
+    text-white
+    py-1.5
+    shadow-sm
+
+}
+
+.navitem {
+    @apply
+    px-5
+    text-sm
+    uppercase
+}

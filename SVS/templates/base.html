@@ -35,7 +35,10 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
-        <nav>
+        <nav class="justify-items-start inline-flex" >
+            <a class="navitem" href="#">Datei</a>
+            <a class="navitem" href="#">Start</a>
+            <a class="navitem" href="#">Stundenplan</a>
 
         </nav>
         {% block content %}{% endblock %}
