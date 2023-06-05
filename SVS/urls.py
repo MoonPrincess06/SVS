@@ -9,6 +9,8 @@ from wagtail.documents import urls as wagtaildocs_urls
 from search import views as search_views
 
 from home.views import HomePage
+from teachers.views import TeachersPage, getTeacher
+from students.views import getStudent
 
 urlpatterns = [
     path('', HomePage),
@@ -17,6 +19,9 @@ urlpatterns = [
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
+    path('teachers/', TeachersPage),
+    path('teachers/<int:pk>/', getTeacher, name='teacherView'),
+    path('students/<int:pk>/', getStudent, name='studentView')
 ]
 
 

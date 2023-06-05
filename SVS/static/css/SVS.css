@@ -596,7 +596,7 @@ label {
   font-weight: 500;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(0 66 106 / var(--tw-text-opacity));
+  color: rgb(0 50 80 / var(--tw-text-opacity));
 }
 
 section {
@@ -609,7 +609,7 @@ p {
   text-align: center;
   font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: rgb(32 90 125 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -633,7 +633,7 @@ input {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(0 41 66 / var(--tw-text-opacity));
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -642,17 +642,17 @@ input {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-inset: inset;
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(128 161 180 / var(--tw-ring-opacity));
 }
 
 input::-moz-placeholder {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(96 137 162 / var(--tw-text-opacity));
 }
 
 input::placeholder {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(96 137 162 / var(--tw-text-opacity));
 }
 
 input:focus {
@@ -661,8 +661,8 @@ input:focus {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-inset: inset;
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(0 66 106 / var(--tw-ring-opacity));
-  --tw-ring-offset-color: #00426a;
+  --tw-ring-color: rgb(191 208 218 / var(--tw-ring-opacity));
+  --tw-ring-offset-color: #bfd0da;
 }
 
 @media (min-width: 640px) {
@@ -694,7 +694,7 @@ button {
   justify-content: center;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(0 66 106 / var(--tw-bg-opacity));
+  background-color: rgb(191 208 218 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.25rem;
@@ -709,7 +709,7 @@ button {
 
 button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 66 106 / var(--tw-bg-opacity));
+  background-color: rgb(191 208 218 / var(--tw-bg-opacity));
 }
 
 button:focus {
@@ -867,6 +867,18 @@ input::placeholder {
   position: static;
 }
 
+.float-right {
+  float: right;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -887,6 +899,10 @@ input::placeholder {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -895,8 +911,20 @@ input::placeholder {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.content-around {
+  align-content: space-around;
 }
 
 .justify-center {
@@ -907,15 +935,41 @@ input::placeholder {
   justify-items: start;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-6 {
@@ -928,8 +982,34 @@ input::placeholder {
   padding-bottom: 3rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .align-middle {
   vertical-align: middle;
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+html {
+  --tw-text-opacity: 1;
+  color: rgb(0 41 66 / var(--tw-text-opacity));
+}
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .loginfield {
@@ -940,7 +1020,7 @@ input::placeholder {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(0 41 66 / var(--tw-text-opacity));
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -955,13 +1035,13 @@ input::placeholder {
 .loginfield::-moz-placeholder {
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(96 137 162 / var(--tw-text-opacity));
 }
 
 .loginfield::placeholder {
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(96 137 162 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -999,6 +1079,19 @@ nav{
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-transform: uppercase;
+}
+
+.success {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+
+.hover\:bg-primary-50:hover {
+  background-color: rgba(223,231,237,0.5);
 }
 
 @media (min-width: 640px) {

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}{% endblock %}
+
+{% block extra_css %}
+
+
+{% endblock extra_css %}
+
+{% block content %}
+<ul class="flex bg-white drop-shadow-md mb-3">
+    <li class="px-3"><a href = '/' class = ''>Schüler</a></li>
+    {# TODO implement href for other categories#}
+    <li class="px-3"><a href = '/teachers' class="active">Lehrer</a></li>
+</ul>
+<div class="flex h-full p-2">
+    <div class="flex p-2 rounded-lg shadow-md bg-white">
+        <ul class="px-6 overflow-scroll">
+            {% for teacher in teachers %}
+                <li class="py-3 px-4 rounded-lg hover:bg-primary-50"><a href="{% url 'teacherView' pk=teacher.id %}"> {{ teacher }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        {{ teacher.firstName }}
+        {{ teacher.lastName }}
+    </div>
+</div>
+{% endblock content %}

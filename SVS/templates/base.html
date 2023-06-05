@@ -33,14 +33,24 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="w-screen h-screen {% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
+
+
+
         <nav class="justify-items-start inline-flex" >
             <a class="navitem" href="#">Datei</a>
             <a class="navitem" href="#">Start</a>
             <a class="navitem" href="#">Stundenplan</a>
 
         </nav>
+        {% if messages %}
+        <ul class="messages float-right block">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% block content %}{% endblock %}
 
         {# Global javascript #}

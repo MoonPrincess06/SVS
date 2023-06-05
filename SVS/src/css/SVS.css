@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+html {
+    @apply
+    text-primary-900
+}
+body{
+    @apply
+    bg-slate-50
+}
 @layer base{
     label {
-        @apply block text-sm font-medium leading-6 mb-2 text-left text-primary-100
+        @apply block text-sm font-medium leading-6 mb-2 text-left text-primary-800
     }
     section {
         @apply bg-white
@@ -17,7 +23,7 @@
         lg:mb-16
         font-light
         text-center
-        text-gray-500
+        text-primary-600
         sm:text-xl
     }
     input {
@@ -27,12 +33,12 @@
         rounded-lg
         border-0
         py-1.5
-        text-gray-900
+        text-primary-900
         shadow-sm
         ring-1
         ring-inset
-        ring-gray-300
-        placeholder:text-gray-400
+        ring-primary-300
+        placeholder:text-primary-400
         focus:ring-2
         focus:ring-inset
         focus:ring-primary-100
@@ -117,12 +123,12 @@
             block
             w-full
             py-1.5
-            text-gray-900
+            text-primary-900
             shadow-sm
             ring-1
             ring-inset
             ring-gray-300
-            placeholder:text-gray-400
+            placeholder:text-primary-400
             sm:text-sm
             sm:leading-6
             placeholder:text-center
@@ -154,4 +160,12 @@ nav{
     px-5
     text-sm
     uppercase
+}
+
+.success {
+    @apply
+    p-2
+    bg-green-100
+    rounded-lg
+    text-green-800
 }

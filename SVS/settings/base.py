@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     "students",
     "lessons",
     "teachers",
+    "users",
+    "schools",
 
     #allauth
     'django.contrib.sites',
