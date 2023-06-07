@@ -24,8 +24,8 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <form action="" method="POST" class="space-y-6">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm ">
+        <form action="" method="POST" class="space-y-6 p-2 rounded-lg shadow-md bg-white">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button class="btn-accent" type="submit">Erstellen</button>

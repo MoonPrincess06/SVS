@@ -1,6 +1,8 @@
 from django import forms
 from .models import student
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
 
 class studentCreationForm(forms.ModelForm):
     firstName = forms.CharField(
@@ -22,15 +24,17 @@ class studentCreationForm(forms.ModelForm):
     DOB = forms.DateField(
         label='Geburtsdatum',
         label_suffix='',
-        widget=forms.SelectDateWidget(attrs={
-            'placeholder': '',
+        widget=forms.DateInput(attrs={
+            'type': 'date',
             'class': 'loginfield'
-        }))
+        })
+    )
 
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['PHorEXE'].label = 'Wählen Sie'
+        self.fields['PHorEXE'].widget.attrs = {'class': 'loginfield'}
         for field in self.fields.values():
             field.label_suffix = ''
 
@@ -61,8 +65,8 @@ class updateStudent(forms.ModelForm):
     DOB = forms.DateField(
         label='Geburtsdatum',
         label_suffix='',
-        widget=forms.SelectDateWidget(attrs={
-            'placeholder': '',
+        widget=forms.DateInput(attrs={
+            'type': 'date',
             'class': 'loginfield'
         })
     )
@@ -70,6 +74,7 @@ class updateStudent(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['PHorEXE'].label = 'Wählen Sie'
+        self.fields['PHorEXE'].widget.attrs = {'class': 'loginfield'}
         for field in self.fields.values():
             field.label_suffix = ''
             field.required = False

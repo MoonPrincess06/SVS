@@ -25,10 +25,13 @@
     <div class = 'w-full flex justify-center'>
         <div class = "sm:mx-auto sm:w-full sm:max-w-sm">
             <h1 class="flex p-2 rounded-lg shadow-md bg-white mb-3">{{ student.firstName }} {{ student.lastName }}</h1>
+
             <form action="" method="POST" class="p-2 rounded-lg shadow-md bg-white fle">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="btn-accent" type="submit">Erstellen</button>
+                <div class="w-full justify-center align-middle flex">
+                    <button class="btn-accent" type="submit">Aktualisieren</button>
+                </div>
             </form>
         </div>
     </div>

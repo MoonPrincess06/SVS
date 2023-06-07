@@ -867,6 +867,10 @@ input::placeholder {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .float-right {
   float: right;
 }
