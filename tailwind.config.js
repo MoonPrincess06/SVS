@@ -3,7 +3,8 @@ module.exports = {
     content: [
         './SVS/templates/**/*.{html,js}',
         './teachers/templates/**/*.{html,js}',
-        './students/templates/**/*.{html,js}'
+        './students/templates/**/*.{html,js}',
+        './lessons/templates/**/*.{html,js}',
     ],
     theme: {
         extend: {

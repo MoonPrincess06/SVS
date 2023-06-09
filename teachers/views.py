@@ -20,5 +20,5 @@ def TeachersPage(request):
 def getTeacher(request, pk):
     context={}
     context['teacher'] = teacher.objects.get(id = pk)
-    context['teachers'] = teacher.objects.all()
+    context['teachers'] = teacher.objects.all().order_by('lastName')
     return render(request, 'teacherview.html', context)

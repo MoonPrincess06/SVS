@@ -35,6 +35,7 @@ class fuehrungszeugnisFile(models.Model):
 class letterFile(models.Model):
     file = models.FileField(upload_to="bericht/letter/", null=True, blank=True)
 
+
 class transcriptFile(models.Model):
     file = models.FileField(upload_to="bericht/transcript/", null=True, blank=True)
 
@@ -110,14 +111,24 @@ class schuldanerkenntnisFile(models.Model):
 class bildungsgutscheinFile(models.Model):
     file = models.FileField(upload_to="contracts/bildungsgutschein", null=True, blank=True)
 
+
 class rentalcontractFile(models.Model):
     file = models.FileField(upload_to="contracts/renting", null=True, blank=True)
 
 
 def setdir(self):
     return "misc/%Y/%m/%d/{}_{}".format(self.lastName, self.firstName)
+
+
 class miscFile(models.Model):
     file = models.FileField(upload_to=setdir, null=True, blank=True)
+
+
+class klasse(models.Model):
+    klasse = models.CharField(max_length=20, unique=True)
+    def __str__(self):
+        return "{}".format(self.klasse)
+
 
 class student(models.Model):
     PHorEXE_choices = [
@@ -130,9 +141,10 @@ class student(models.Model):
     anerkennung = models.BooleanField(default=False)
     ausbildung = models.BooleanField(default=False)
     PHorEXE = models.IntegerField(choices=PHorEXE_choices, default=None)
+    klasse = models.ForeignKey(klasse, on_delete=models.CASCADE, null=True)
+
     # TODO grades
     # TODO start and end dates
-
 
     class Bericht(models.Model):
         Pass = models.ManyToManyField(passFile)

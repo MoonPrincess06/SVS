@@ -38,14 +38,16 @@
 
 
 
-        <nav class="justify-items-start inline-flex " >
+        <nav class="justify-items-start inline-flex drop-shadow-md mb-3" >
             <a class="navitem" href="#">Datei</a>
-            <a class="navitem" href="#">Start</a>
-            <a class="navitem" href="#">Stundenplan</a>
-
+            <a class="navitem" href="/">Start</a>
+            <a class="navitem" href="{% url 'lessonCreation' %}">Stundenplan</a>
+            <a class="navitem" href="/">Schüler</a>
+            <a class="navitem" href = '{% url 'classCreation' %}'>Klassen</a>
+            <a class="navitem" href = '/teachers'>Lehrer</a>
         </nav>
         {% if messages %}
-        <ul class="messages float-right block">
+        <ul class="messages float-right block ">
             {% for message in messages %}
             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
             {% endfor %}

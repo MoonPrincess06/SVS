@@ -10,7 +10,8 @@ from search import views as search_views
 
 from home.views import HomePage
 from teachers.views import TeachersPage, getTeacher
-from students.views import getStudent
+from students.views import getStudent, classCreation
+from lessons.views import lessonCreation, lessonOverview
 
 urlpatterns = [
     path('', HomePage),
@@ -19,9 +20,12 @@ urlpatterns = [
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
-    path('teachers/', TeachersPage),
+    path('teachers/', TeachersPage, name='teacherCreation'),
     path('teachers/<int:pk>/', getTeacher, name='teacherView'),
-    path('students/<int:pk>/', getStudent, name='studentView')
+    path('students/<int:pk>/', getStudent, name='studentView'),
+    path('lessons/create', lessonCreation, name='lessonCreation'),
+    path('lessons/', lessonOverview, name='lessonOverview'),
+    path('classes/', classCreation, name='classCreation')
 ]
 
 
